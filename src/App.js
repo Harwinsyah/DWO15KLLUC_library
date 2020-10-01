@@ -11,6 +11,7 @@ import Profile from "./Pages/Profile";
 import Library from "./Pages/MyLibrary";
 import AddBook from "./Pages/AddBook";
 import Admin from "./Pages/Admin";
+import AddBooks from "./Pages/AddBooks";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route exact path="/library" component={Library} />
         <Route exact path="/addBook" component={AddBook} />
         <Route exact path="/admin" component={Admin} />
+        <Route exact path="/addbooks" component={AddBooks} />
       </Switch>
     </BrowserRouter>
   );

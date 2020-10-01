@@ -38,7 +38,7 @@ export default function Admin() {
           >
             <Popover id="popover-contained">
               <Popover.Content>
-                <Button onClick={() => history.push("/addBook")}>
+                <Button onClick={() => history.push("/addBooks")}>
                   Add Book
                 </Button>
                 <Button onClick={() => history.push("/")}>Logout</Button>
