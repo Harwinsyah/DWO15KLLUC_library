@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Container, Navbar, Button } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
 
 import logo from "../Assets/Icon/libraryIcon.svg";
 import SignIn from "../Components/Signin";
+import SignUp from "../Components/Signup";
 
 export default class Home extends Component {
   render() {
@@ -22,7 +23,7 @@ export default class Home extends Component {
             Sign - up today and receive unlimited access to all of your reading
             - share your book.
           </p>
-          <Button> Sign Up </Button> <SignIn />
+          <SignUp /> <SignIn />
         </Container>
       </div>
     );

@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 
-export default function Signin() {
+export default function Signup() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Sign In
+      <Button variant="info" onClick={handleShow}>
+        Sign Up
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Body>
-          <h1>Sign In</h1>
+          <h1>Sign Up</h1>
           <Form>
             <Form.Group>
               <Form.Control name="email" type="text" placeholder="Email" />
@@ -26,13 +26,33 @@ export default function Signin() {
               />
             </Form.Group>
             <Form.Group>
+              <Form.Control
+                name="fullName"
+                type="text"
+                placeholder="Full Name"
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Control as="select" custom>
+                <option>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </Form.Control>
+            </Form.Group>
+            <Form.Group>
+              <Form.Control name="phone" type="text" placeholder="Phone" />
+            </Form.Group>
+            <Form.Group>
+              <Form.Control name="Address" type="text" placeholder="Address" />
+            </Form.Group>
+            <Form.Group>
               <Button variant="primary" type="submit" className="btn btn-block">
-                Sign In
+                Sign Up
               </Button>
             </Form.Group>
             <Form.Group>
               <Button variant="link" className="btn btn-block">
-                Don't have an account ? klik Here
+                Already have an account ? klik <b>Here</b>
               </Button>
             </Form.Group>
           </Form>
