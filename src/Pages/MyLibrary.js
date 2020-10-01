@@ -1,16 +1,15 @@
 import React from "react";
 import SideNav from "../Components/Sidenav";
+import { Col, Container, Row } from "react-bootstrap";
 
-import { Container, Row, Col } from "react-bootstrap";
-
-export default function Profile() {
+export default function MyLibrary() {
   return (
     <Container fluid>
       <Row>
         <Col>
           <SideNav />
         </Col>
-        <Col>Profile</Col>
+        <Col>My Library</Col>
       </Row>
     </Container>
   );

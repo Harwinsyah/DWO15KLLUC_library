@@ -28,7 +28,7 @@ export default function SideNav() {
           <li className="pointer" onClick={() => history.push("/profile")}>
             <FaUser /> Profile
           </li>
-          <li>
+          <li className="pointer" onClick={() => history.push("/library")}>
             <FaBuffer /> My Library
           </li>
           <li>

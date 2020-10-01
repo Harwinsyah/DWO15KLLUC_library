@@ -8,6 +8,7 @@ import Home from "./Pages/Home";
 import Detail from "./Pages/Detail";
 import Read from "./Pages/Read";
 import Profile from "./Pages/Profile";
+import Library from "./Pages/MyLibrary";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route exact path="/detail" component={Detail} />
         <Route exact path="/read" component={Read} />
         <Route exact path="/profile" component={Profile} />
+        <Route exact path="/library" component={Library} />
       </Switch>
     </BrowserRouter>
   );
