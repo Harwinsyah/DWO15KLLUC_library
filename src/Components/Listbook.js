@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Card, Button, Overlay, Popover, CardGroup } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 export default function Listbook() {
+  const history = useHistory();
   const [show, setShow] = useState(false);
   const [target, setTarget] = useState(null);
   const ref = useRef(null);
@@ -67,7 +69,10 @@ export default function Listbook() {
                 <p>J. K. Rowling</p>
               </Card.Footer>
             </Card>
-            <Card>
+            <Card
+              style={{ cursor: "pointer" }}
+              onClick={() => history.push("/detail")}
+            >
               <Card.Img variant="top" />
               <Card.Body>
                 <h3>Tess on the Road</h3>
