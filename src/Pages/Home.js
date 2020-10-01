@@ -1,31 +1,27 @@
-import React, { Component } from "react";
-import { Container, Navbar } from "react-bootstrap";
+import React from "react";
+import { Container, Row, Col, Jumbotron } from "react-bootstrap";
 
-import logo from "../Assets/Icon/libraryIcon.svg";
-import SignIn from "../Components/Signin";
-import SignUp from "../Components/Signup";
+import SideNav from "../Components/Sidenav";
+import ListBook from "../Components/Listbook";
 
-export default class Home extends Component {
-  render() {
-    return (
-      <div>
-        <Navbar>
-          <Navbar.Brand href="#">
-            <img src={logo} alt="logo" />
-          </Navbar.Brand>
-        </Navbar>
-        <Container fluid>
-          <h1>
-            <i> Your </i> library
-          </h1>
-          <h1> anywhere </h1>
-          <p>
-            Sign - up today and receive unlimited access to all of your reading
-            - share your book.
-          </p>
-          <SignUp /> <SignIn />
-        </Container>
-      </div>
-    );
-  }
+export default function Home() {
+  return (
+    <Container fluid>
+      <Row>
+        <Col md="auto">
+          <SideNav />
+        </Col>
+        <Col>
+          <Row>
+            <Jumbotron>
+              <h1>share, read and love</h1>
+            </Jumbotron>
+          </Row>
+          <Row>
+            <ListBook />
+          </Row>
+        </Col>
+      </Row>
+    </Container>
+  );
 }

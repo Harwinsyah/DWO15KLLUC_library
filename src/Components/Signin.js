@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 export default function Signin() {
+  const history = useHistory();
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -26,7 +28,12 @@ export default function Signin() {
               />
             </Form.Group>
             <Form.Group>
-              <Button variant="primary" type="submit" className="btn btn-block">
+              <Button
+                variant="primary"
+                type="submit"
+                className="btn btn-block"
+                onClick={() => history.push("/home")}
+              >
                 Sign In
               </Button>
             </Form.Group>
