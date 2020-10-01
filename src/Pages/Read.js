@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Image } from "react-bootstrap";
+import { Container, Row, Image, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import Logo from "../Assets/Icon/libraryIcon.svg";
 
@@ -8,14 +8,16 @@ export default function Read() {
   return (
     <Container fluid>
       <Row>
-        <Image
-          src={Logo}
-          alt="logo"
-          style={{ cursor: "pointer" }}
-          onClick={() => history.push("/home")}
-        />
+        <Col>
+          <Image
+            src={Logo}
+            alt="logo"
+            style={{ cursor: "pointer" }}
+            onClick={() => history.push("/home")}
+          />
+        </Col>
+        <Col>Alice in wonderland</Col>
       </Row>
-      <Row>Alice in wonderland</Row>
     </Container>
   );
 }

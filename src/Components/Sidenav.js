@@ -31,10 +31,10 @@ export default function SideNav() {
           <li className="pointer" onClick={() => history.push("/library")}>
             <FaBuffer /> My Library
           </li>
-          <li>
+          <li className="pointer" onClick={() => history.push("/addBook")}>
             <FaBookMedical /> Add Book
           </li>
-          <li>
+          <li className="pointer" onClick={() => history.push("/")}>
             <FaDoorOpen /> Logout
           </li>
         </ul>
