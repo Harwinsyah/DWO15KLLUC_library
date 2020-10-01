@@ -25,6 +25,8 @@ export default function Signin() {
                 name="password"
                 type="password"
                 placeholder="Password"
+                className="pointer"
+                onClick={() => history.push("/admin")}
               />
             </Form.Group>
             <Form.Group>
